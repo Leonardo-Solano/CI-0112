@@ -38,4 +38,24 @@ public class Robots {
     public Double getAtaque (){
         return ataque;
     }
+    
+
+    //Rango de vida de los robots (50-100)
+
+    if (puntosDeVida <50){
+        
+        puntosDeVida = 50;
+    }
+
+    //Metodos
+
+    public void atacar (Double cantDeDayo){
+
+        this.ataque = this.puntosDeVida-cantDeDayo;
+
+        double atacar = this.ataque;
+
+    }
+
+
 }
