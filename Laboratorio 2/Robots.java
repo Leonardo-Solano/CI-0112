@@ -60,12 +60,9 @@ public class Robots {
 
     //Metodos
 
-    public void atacar (Double cantDeDayo){
+    public void atacar (Double cantDeDay            s                                                          o){
 
-        this.ataque = this.puntosDeVida-cantDeDayo;
-
-        double atacar = this.ataque;
-
+        
     }
 
 
