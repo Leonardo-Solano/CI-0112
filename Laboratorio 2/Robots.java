@@ -24,4 +24,18 @@ public class Robots {
     public void SetAtaque (Double ataque){
         this.ataque = ataque;
     }
+
+    //Getters
+
+    public String getNombre (){
+        return nombre;
+    }
+
+    public Double getPuntosDeVida (){
+        return puntosDeVida;
+    }
+
+    public Double getAtaque (){
+        return ataque;
+    }
 }
