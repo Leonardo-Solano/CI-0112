@@ -60,10 +60,25 @@ public class Robots {
 
     //Metodos
 
-    public void atacar (Double cantDeDay            s                                                          o){
-
+    public void atacar (Robot otroRobot){
         
+        Double daño = this.ataque;
+
+        double VidaActual = otroRobot.getPuntosDeVida ();
+        Double VidaRestante = VidaActual-daño;
+
+        //Esto nos ayuda a actualizar la vida del otro robot despúes de recibir el ataque.
+        otroRobot.SetPuntosDeVida (VidaRestante);
+
+        //Este if le permite al programa saber que un robot no puede quedar con vida negativo, por lo que, si eso sucede, automaticamente queda en 0.
+        if (VidaRestante<0){
+            VidaRestante=0;
+        }
     }
 
+    //Este método nos permite saber si el robot está vivo o no. No hace falta un if, porque si la vida es mayor a 0, automaticamente sabe que es un true.
+    public boolean estaVivo(){
 
+        return this.puntosDeVida > 0;
+    }
 }
