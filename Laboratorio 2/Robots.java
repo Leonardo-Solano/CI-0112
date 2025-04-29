@@ -9,6 +9,25 @@ public class Robots {
         this.nombre = nombre;
         this.puntosDeVida = puntosDeVida;
         this.ataque = ataque;
+
+
+        //Rango de vida del robot entre 50 y 100
+
+        if (puntosDeVida<50){
+            puntosDeVida = 50;
+        }
+        if (puntosDeVida>100){
+            puntosDeVida = 100;
+        }
+
+        //Rango de ataque del robot entre 10 y 20
+
+        if (ataque<10){
+            ataque=10;
+        }
+        if (ataque>20){
+            ataque=20;
+        }
     }
 
     //Setters
@@ -37,14 +56,6 @@ public class Robots {
 
     public Double getAtaque (){
         return ataque;
-    }
-    
-
-    //Rango de vida de los robots (50-100)
-
-    if (puntosDeVida <50){
-        
-        puntosDeVida = 50;
     }
 
     //Metodos
