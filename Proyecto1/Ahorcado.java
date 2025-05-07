@@ -17,6 +17,7 @@ public Ahorcado (String palabra){
     for (int i = 0; i < palabra.length(); i++){
     progreso[i] = '_';
     }
+    this.letrasAdivinadas = new char[palabra.length() + 10];
 }
 
 
@@ -28,19 +29,6 @@ public int getIntentosRestantes() {
 
 public String getProgreso() {
     return new String(progreso);
-}
-
-public boolean haGanado() {
-    for (int i = 0; i < progreso.length; i++) {
-        if (progreso[i] == '_') {
-            return false;
-        }
-    }
-    return true;
-}
-
-public boolean haPerdido() {
-    return intentosRestantes <= 0;
 }
 
 
@@ -83,8 +71,6 @@ public void adivinarLetra(char letra){
         System.out.println();
     }
 
-
-    
 }
 
 
@@ -93,4 +79,5 @@ public void adivinarLetra(char letra){
 
 
 
-}
+
+
