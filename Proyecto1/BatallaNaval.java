@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class BatallaNaval {
 
     private int barcoUno;
@@ -22,6 +24,8 @@ public class BatallaNaval {
         inicializarTab (this.tableroJugador2);
         inicializarTab (this.disparosJugador1);
         inicializarTab (this.disparosJugador2);
+
+        vidaBarcos();
     }
 
 
@@ -56,4 +60,44 @@ public class BatallaNaval {
             }
         }
     }
+
+    public void vidaBarcos (){
+
+        this.barcoUno = 300;
+        this.barcoDos = 300;
+    }
+
+    public void disparos ( int fila, int columna, boolean jugador1){
+
+        if (jugador1) {
+
+            if (tableroJugador2 [fila][columna] == 'B'){
+
+                    disparosJugador1 [fila][columna] = 'X';
+                    tableroJugador2 [fila] [columna] = 'X';
+
+                    barcoDos -= 100;
+                    System.out.println("Le has dado al objetivo, jugador 1");
+
+            }else{
+
+                    disparosJugador1 [fila][columna] = 'O';
+                    System.out.println("El jugador 1 ha fallado");
+
+                }
+
+            }if (tableroJugador1 [fila][columna] == 'B') {
+
+                    disparosJugador2 [fila][columna] = 'X';
+                    tableroJugador1  [fila][columna] = 'X';
+
+                    barcoUno -= 100;
+                    System.out.println("Le has dado al objetivo, jugador 2");
+
+            }else{
+
+                    disparosJugador1 [fila][columna] = 'O';
+                    System.out.println("El jugador 2 ha fallado");
+        }
+     }
 }
