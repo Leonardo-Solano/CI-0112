@@ -13,6 +13,8 @@ public class BatallaNaval {
 
     public BatallaNaval (){
 
+        //En el metodo constructor se inicializan los tableros, al vida de los barcos y los respectivos disparos de los jugadores.
+        
         this.turnoJugador = true;
         this.tableroJugador1 = new char[5][5];
         this.tableroJugador2 = new char[5][5];
@@ -60,12 +62,14 @@ public class BatallaNaval {
         }
     }
 
+    //Este metodo permite asignarle vida a los barcos de los jugadores.
     public void vidaBarcos (){
 
         this.barcoUno = 300;
         this.barcoDos = 300;
     }
 
+    //Por medio de este metodo se da la accion de disparle entre los dos jugadores. Ademas permita saber cuando acerto y fallo un jugador.
     public void disparos ( int fila, int columna, boolean jugador1){
 
         if (jugador1) {
@@ -100,6 +104,7 @@ public class BatallaNaval {
          }
     }
 
+    //Este metodo permite colocar los barco en el tablero de cada jugador.
     public void posicionDelBarco (boolean esjugador){
 
         int barcosPorColocar = 0;
@@ -121,12 +126,14 @@ public class BatallaNaval {
 
         System.out.println("Hola, jugador." +numJugador+ "Por favor ingrese sus 3 barcos en el tablero");
 
+            //Este while permite que los jugadores agregan sus 3 barcos en el respectivo tablero
         while (barcosPorColocar < 3){
             System.out.println ("Por favor ingrese una fila (0 a 4): ");
             int fila = scanner.nextInt();
             System.out.println ("Por favor ingrese una columna (0 a 4): ");
             int columna = scanner.nextInt();
 
+                //Este if ayuda a colocar los parametros en los que deben existir los barcos.
             if (fila >= 0 && fila < 5 && columna >= 0 && columna < 5){
                 if (tablero [fila][columna] != 'B'){
                     tablero [fila][columna] = 'B';
@@ -144,6 +151,7 @@ public class BatallaNaval {
         }
     }
 
+    //Este metodo le permite al programa mostrar el tablero en la pantalla de los jugadores por turno.
     public void mostrarTablero (int jugadorActual){
 
         char [][] miTablero;
@@ -167,6 +175,7 @@ public class BatallaNaval {
         impresionDeMatriz (disparosHechos);
     }
 
+    //Este metodo se relaciona con el metodo mostrarTablero ya que, este precisamente muestra la matriz del tablero donde se va a colar todo.
     public void impresionDeMatriz (char [][] matriz){
         for (int i = 0; i < 5; i++){
             for (int j = 0; j < 5; j++){
@@ -177,6 +186,7 @@ public class BatallaNaval {
         }
     }
 
+    //Este metodo le permite al programa ver si ya uno de los dos jugadores ganaron el juego.
     public boolean verificarSiHayGanador() {
         if (barcoUno <= 0){
             System.out.println ("El jugador dos ha ganado");
@@ -187,10 +197,13 @@ public class BatallaNaval {
                 return true;
             }
 
+            //Sino s cumplen los dos if's, significa que ambos tienen vida, por lo que, retorna false (nadie tiene 0 de vida)
             return false;
         }
 
-
+    /*Por ultimo, el metodo jugar permite que los jugadores puedan interactuar con todos los otros metodos ya creados. Les permite colocar
+     * los barcos dentro del tablero, saber cuando se acaba el juego y disparar a los otros barcos.
+     */
     public void jugar (){
 
         boolean seAcaboElJuego = false;
@@ -202,6 +215,9 @@ public class BatallaNaval {
         System.out.println("Por favor, jugador " +jugadorActual+ ". Posiciona tus 3 barcos");
         posicionDelBarco(false);
 
+        /*Este while es el que permite que el juego siga en pie todo el tiempo. Tiene la instruccion que le permite detener el bucle
+         * solo si verifica que el juego ya acabo. Sino ha acabado, sigue el bucle asta que alguno pierda ssus 3 barcos
+         */
         while (!seAcaboElJuego) {
 
             mostrarTablero(jugadorActual);
