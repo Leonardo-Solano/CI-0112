@@ -4,14 +4,12 @@ public class Menu {
     Scanner scanner = new Scanner (System.in);
 
         boolean siguejugando = true;
-        
         while (siguejugando) {
             
             System.out.println ("=== Bienvenidos al MENÚ PRINCIPAL ===");
             System.out.println ("*** Seleccione 1 para jugar ahorcado ***");
             System.out.println ("*** Seleccione 2 para jugar batalla naval ***");
             System.out.println ("*** Seleccione 3 para salir ***");
-
             int opcion = scanner.nextInt();
             scanner.nextLine();
 
@@ -21,6 +19,7 @@ public class Menu {
                         System.out.println("Jugador 1, ingrese la palabra secreta para el ahorcado:");
                         String palabraSecreta = scanner.nextLine().toLowerCase();
 
+                        System.out.println("*** Turno del Jugador 2 ***");
                         Ahorcado juegoAhorcado = new Ahorcado(palabraSecreta);
                         juegoAhorcado.jugar();
 
@@ -35,7 +34,7 @@ public class Menu {
 
                 case 3:
                     siguejugando = false;
-                      System.out.println ("*** Gracias por jugar <3 ***");
+                      System.out.println ("*** Gracias por jugar ***");
                     break;
 
                 default:

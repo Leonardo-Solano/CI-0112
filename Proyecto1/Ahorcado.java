@@ -103,8 +103,6 @@ public class Ahorcado{
     public void jugar(){
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("----Partida de Ahorcado----");
-
         while(!haGanado() && !haPerdido()) {
             System.out.println("Jugador 2 ingrese una letra para adivinar");
             String entrada = scanner.nextLine();
