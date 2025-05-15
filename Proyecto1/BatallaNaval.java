@@ -186,7 +186,7 @@ public class BatallaNaval {
         }
     }
 
-    //Este metodo le permite al programa ver si ya uno de los dos jugadores ganaron el juego.
+    //Este metodo le permite al programa ver si ya uno de los dos jugadores ganaron el juego. La idea es que verifique si los barcos ya tienen 0 de vida
     public boolean verificarSiHayGanador() {
         if (barcoUno <= 0){
             System.out.println ("El jugador dos ha ganado");
@@ -216,7 +216,7 @@ public class BatallaNaval {
         posicionDelBarco(false);
 
         /*Este while es el que permite que el juego siga en pie todo el tiempo. Tiene la instruccion que le permite detener el bucle
-         * solo si verifica que el juego ya acabo. Sino ha acabado, sigue el bucle asta que alguno pierda ssus 3 barcos
+         * solo si verifica que el juego ya acabo. Sino ha acabado, sigue el bucle hasta que alguno pierda ssus 3 barcos
          */
         while (!seAcaboElJuego) {
 
