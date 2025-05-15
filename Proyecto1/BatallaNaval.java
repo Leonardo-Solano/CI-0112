@@ -14,7 +14,7 @@ public class BatallaNaval {
     public BatallaNaval (){
 
         //En el metodo constructor se inicializan los tableros, al vida de los barcos y los respectivos disparos de los jugadores.
-        
+
         this.turnoJugador = true;
         this.tableroJugador1 = new char[5][5];
         this.tableroJugador2 = new char[5][5];
@@ -209,10 +209,10 @@ public class BatallaNaval {
         boolean seAcaboElJuego = false;
         int jugadorActual = 1;
 
-        System.out.println("Por favor, jugador " +jugadorActual+ ". Posiciona tus 3 barcos");
+        System.out.println("Por favor, jugador:  " + jugadorActual + ". Posiciona tus 3 barcos");
         posicionDelBarco(true);
 
-        System.out.println("Por favor, jugador " +jugadorActual+ ". Posiciona tus 3 barcos");
+        System.out.println("Por favor, jugador:  " + jugadorActual + ". Posiciona tus 3 barcos");
         posicionDelBarco(false);
 
         /*Este while es el que permite que el juego siga en pie todo el tiempo. Tiene la instruccion que le permite detener el bucle

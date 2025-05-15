@@ -20,13 +20,12 @@ public class Menu {
 
                 case 1:
 
-                    BatallaNaval jugarBatallaNval = new BatallaNaval();
-                    jugarBatallaNval.jugar();
-
                     break;
                 
                 case 2:
-
+                        BatallaNaval jugarBatallaNval = new BatallaNaval();
+                        jugarBatallaNval.jugar();
+                        
                     break;
 
                 case 3:
