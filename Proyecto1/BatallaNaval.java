@@ -14,7 +14,7 @@ public class BatallaNaval {
     public BatallaNaval (){
 
         //En el metodo constructor se inicializan los tableros, al vida de los barcos y los respectivos disparos de los jugadores.
-        
+
         this.turnoJugador = true;
         this.tableroJugador1 = new char[5][5];
         this.tableroJugador2 = new char[5][5];
@@ -124,7 +124,7 @@ public class BatallaNaval {
             numJugador = 2;
         }
 
-        System.out.println("Hola, jugador." +numJugador+ "Por favor ingrese sus 3 barcos en el tablero");
+        System.out.println("Hola, jugador: " + numJugador + "Por favor ingrese sus 3 barcos en el tablero");
 
             //Este while permite que los jugadores agregan sus 3 barcos en el respectivo tablero
         while (barcosPorColocar < 3){
@@ -138,7 +138,7 @@ public class BatallaNaval {
                 if (tablero [fila][columna] != 'B'){
                     tablero [fila][columna] = 'B';
                     barcosPorColocar++;
-                    System.out.println("Barco colocado en ( " +fila+ "," +columna+ ")" );
+                    System.out.println("Barco colocado en ( " + fila + "," + columna + ")" );
 
                 }else{
                     System.out.println("Ya hay un barco en esa posicion, escoge otra" );
@@ -186,7 +186,7 @@ public class BatallaNaval {
         }
     }
 
-    //Este metodo le permite al programa ver si ya uno de los dos jugadores ganaron el juego.
+    //Este metodo le permite al programa ver si ya uno de los dos jugadores ganaron el juego. La idea es que verifique si los barcos ya tienen 0 de vida
     public boolean verificarSiHayGanador() {
         if (barcoUno <= 0){
             System.out.println ("El jugador dos ha ganado");
@@ -209,22 +209,22 @@ public class BatallaNaval {
         boolean seAcaboElJuego = false;
         int jugadorActual = 1;
 
-        System.out.println("Por favor, jugador " +jugadorActual+ ". Posiciona tus 3 barcos");
+        System.out.println("Por favor, jugador:  " + jugadorActual + ". Posiciona tus 3 barcos");
         posicionDelBarco(true);
 
-        System.out.println("Por favor, jugador " +jugadorActual+ ". Posiciona tus 3 barcos");
+        System.out.println("Por favor, jugador:  " + jugadorActual + ". Posiciona tus 3 barcos");
         posicionDelBarco(false);
 
         /*Este while es el que permite que el juego siga en pie todo el tiempo. Tiene la instruccion que le permite detener el bucle
-         * solo si verifica que el juego ya acabo. Sino ha acabado, sigue el bucle asta que alguno pierda ssus 3 barcos
+         * solo si verifica que el juego ya acabo. Sino ha acabado, sigue el bucle hasta que alguno pierda ssus 3 barcos
          */
         while (!seAcaboElJuego) {
 
             mostrarTablero(jugadorActual);
             
-            System.out.println ("Jugador" + jugadorActual + "Ingrese una fila del 0-4, por favor: ");
+            System.out.println (" Jugador: " + jugadorActual + "Ingrese una fila del 0-4, por favor: ");
             int fila = scanner.nextInt();
-            System.out.println ("Jugador" + jugadorActual + "Ingrese una columna del 0-4, por favor: ");
+            System.out.println (" Jugador " + jugadorActual + "Ingrese una columna del 0-4, por favor: ");
             int columna = scanner.nextInt();
             disparos(fila, columna, jugadorActual == 1);
 
