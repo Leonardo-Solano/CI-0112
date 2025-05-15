@@ -124,7 +124,7 @@ public class BatallaNaval {
             numJugador = 2;
         }
 
-        System.out.println("Hola, jugador." +numJugador+ "Por favor ingrese sus 3 barcos en el tablero");
+        System.out.println("Hola, jugador: " + numJugador + "Por favor ingrese sus 3 barcos en el tablero");
 
             //Este while permite que los jugadores agregan sus 3 barcos en el respectivo tablero
         while (barcosPorColocar < 3){
@@ -138,7 +138,7 @@ public class BatallaNaval {
                 if (tablero [fila][columna] != 'B'){
                     tablero [fila][columna] = 'B';
                     barcosPorColocar++;
-                    System.out.println("Barco colocado en ( " +fila+ "," +columna+ ")" );
+                    System.out.println("Barco colocado en ( " + fila + "," + columna + ")" );
 
                 }else{
                     System.out.println("Ya hay un barco en esa posicion, escoge otra" );
@@ -222,9 +222,9 @@ public class BatallaNaval {
 
             mostrarTablero(jugadorActual);
             
-            System.out.println ("Jugador" + jugadorActual + "Ingrese una fila del 0-4, por favor: ");
+            System.out.println (" Jugador: " + jugadorActual + "Ingrese una fila del 0-4, por favor: ");
             int fila = scanner.nextInt();
-            System.out.println ("Jugador" + jugadorActual + "Ingrese una columna del 0-4, por favor: ");
+            System.out.println (" Jugador " + jugadorActual + "Ingrese una columna del 0-4, por favor: ");
             int columna = scanner.nextInt();
             disparos(fila, columna, jugadorActual == 1);
 
