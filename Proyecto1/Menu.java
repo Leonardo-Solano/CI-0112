@@ -2,7 +2,7 @@ import java.util.Scanner;
 public class Menu {
     public static void main (String [] args){
     Scanner scanner = new Scanner (System.in);
-    
+
         boolean siguejugando = true;
         
         while (siguejugando) {
@@ -18,6 +18,12 @@ public class Menu {
             switch (opcion) {
 
                 case 1:
+                        System.out.println("Jugador 1, ingrese la palabra secreta para el ahorcado:");
+                        String palabraSecreta = scanner.nextLine().toLowerCase();
+
+                        Ahorcado juegoAhorcado = new Ahorcado(palabraSecreta);
+                        juegoAhorcado.jugar();
+
 
                     break;
                 
