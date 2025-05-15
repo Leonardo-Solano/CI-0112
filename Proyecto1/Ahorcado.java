@@ -1,3 +1,4 @@
+import java.util.Scanner;
 public class Ahorcado{
 //atributos de la clase
     private String palabraSecreta;
@@ -88,12 +89,53 @@ public class Ahorcado{
     return true;
     }
 
+    
 
 //Método que verifica si ya perdió todos los intentos y por lo tanto perdió
     public boolean haPerdido(){
         return intentosRestantes <= 0;
     }
+
+
+
+//El método jugar es en el que van a interactuar los demás métodos y
+//donde se va a ejecutar la lógica de la partida: entrada de letras, verificación de aciertos, turnos, y resultado final.
+    public void jugar(){
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("----Partida de Ahorcado----");
+
+        while(!haGanado() && !haPerdido()) {
+            System.out.println("Jugador 2 ingrese una letra para adivinar");
+            String entrada = scanner.nextLine();
+
+            if (entrada.length() != 1) {
+            System.out.println("Entrada inválida, solo puede ingresar una sola letra");
+            continue;  
+        }
+
+            if (!Character.isLetter(entrada.charAt(0))) {
+            System.out.println("Entrada invália, debe ingresar una letra para poder jugar");
+            continue;  
+        }
+            char letra = entrada.charAt(0);
+            adivinarLetra(letra);
+
+        }
+        if (haGanado()) {
+        System.out.println("Ha adivinado la palabra secreta");
+    } else {
+        System.out.println("Se acabaron los intentos, la palabra era: " + palabraSecreta);
+    }
+            
+            
+    }
 }
+
+
+
+
+
 
 
 
