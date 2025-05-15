@@ -1,4 +1,4 @@
-import java.util.Scanner;
+ import java.util.Scanner;
 
 public class BatallaNaval {
 
@@ -124,5 +124,30 @@ public class BatallaNaval {
 
         System.out.println("Hola, jugador." +numJugador+ "Por favor ingrese sus 3 barcos en el tablero");
 
+        while (barcosPorColocar < 3){
+            System.out.println ("Por favor ingrese una fila (0 a 4): ");
+            int fila = scanner.nextInt();
+            System.out.println ("Por favor ingrese una columna (0 a 4): ");
+            int columna = scanner.nextInt();
+
+            if (fila >= 0 && fila < 5 && columna >= 0 && columna < 5){
+                if (tablero [fila][columna] != 'B'){
+                    tablero [fila][columna] = 'B';
+                    barcosPorColocar++;
+                    System.out.println("Barco colocado en ( " +fila+ "," +columna+ ")" );
+
+                }else{
+                    System.out.println("Ya hay un barco en esa posicion, escoge otra" );
+                }
+
+            } else{
+                    System.out.println("Coordenadas fuera de rango");
+            }
+
+        }
+    }
+
+    public void mostrarTablero (int jugadorActual){
+        
     }
 }
