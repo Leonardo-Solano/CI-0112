@@ -148,6 +148,35 @@ public class BatallaNaval {
     }
 
     public void mostrarTablero (int jugadorActual){
-        
+
+        char [][] miTablero;
+        char [][] disparosHechos;
+
+        if (jugadorActual == 1){
+
+            miTablero = tableroJugador1;
+            disparosHechos = tableroJugador1;
+
+        }else{
+
+            miTablero = tableroJugador2;
+            disparosHechos = tableroJugador2;
+        }
+
+        System.out.println( "tu tablero");
+        impresionDeMatriz (miTablero);
+
+        System.out.println( "Tablero Enemigo. Estos son tus disparos");
+        impresionDeMatriz (disparosHechos);
+    }
+
+    public void impresionDeMatriz (char [][] matriz){
+        for (int i = 0; i < 5; i++){
+            for (int j = 0; j < 5; j++){
+
+                System.out.println(matriz [i][j] + "  ");
+            }
+                System.out.print();
+        }
     }
 }
