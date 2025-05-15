@@ -9,12 +9,11 @@ public class BatallaNaval {
     private char [][] tableroJugador2;
     private char [][] disparosJugador1;
     private char [][] disparosJugador2;
+    private Scanner scanner = new Scanner (System.in);
 
-    public BatallaNaval (int barcoUno, int barcoDos, boolean turnoJugador, char tableroJugador1){
+    public BatallaNaval (){
 
-        this.barcoUno = barcoUno;
-        this.barcoDos = barcoDos;
-        this.turnoJugador = turnoJugador;
+        this.turnoJugador = true;
         this.tableroJugador1 = new char[5][5];
         this.tableroJugador2 = new char[5][5];
         this.disparosJugador1 = new char[5][5];
@@ -43,13 +42,13 @@ public class BatallaNaval {
 
     //Getters
 
-    public int barcoUno (){
+    public int getBarcoUno (){
         return barcoUno;
     }
-    public int barcoDos (){
+    public int getBarcoDos (){
         return barcoDos;
     }
-    public boolean turnoJugador (){
+    public boolean getTurnoJugador (){
         return turnoJugador;
     }
 
@@ -77,33 +76,31 @@ public class BatallaNaval {
                     tableroJugador2 [fila] [columna] = 'X';
 
                     this.barcoDos -= 100;
-                    System.out.println("Le has dado al objetivo, jugador 1");
+                    System.out.println(" has dado al objetivo, jugador 1");
 
             }else{
-
                     disparosJugador1 [fila][columna] = 'O';
                     System.out.println("El jugador 1 ha fallado");
-
                 }
 
-            } if (tableroJugador1 [fila][columna] == 'B') {
+            }else{
+                
+                if (tableroJugador1 [fila][columna] == 'B') {
 
                     disparosJugador2 [fila][columna] = 'X';
                     tableroJugador1  [fila][columna] = 'X';
 
                     this.barcoUno -= 100;
-                    System.out.println("Le has dado al objetivo, jugador 2");
-
+                    System.out.println(" has dado al objetivo, jugador 2");
             }else{
 
-                    disparosJugador1 [fila][columna] = 'O';
+                    disparosJugador2 [fila][columna] = 'O';
                     System.out.println("El jugador 2 ha fallado");
-        }
+            }
+         }
     }
 
     public void posicionDelBarco (boolean esjugador){
-        
-        Scanner scanner = new Scanner(System.in);
 
         int barcosPorColocar = 0;
 
@@ -155,12 +152,12 @@ public class BatallaNaval {
         if (jugadorActual == 1){
 
             miTablero = tableroJugador1;
-            disparosHechos = tableroJugador1;
+            disparosHechos = disparosJugador1;
 
         }else{
 
             miTablero = tableroJugador2;
-            disparosHechos = tableroJugador2;
+            disparosHechos = disparosJugador2;
         }
 
         System.out.println( "tu tablero");
@@ -174,9 +171,57 @@ public class BatallaNaval {
         for (int i = 0; i < 5; i++){
             for (int j = 0; j < 5; j++){
 
-                System.out.println(matriz [i][j] + "  ");
+                System.out.print(matriz [i][j] + "  ");
             }
-                System.out.print();
+                System.out.println();
         }
+    }
+
+    public boolean verificarSiHayGanador() {
+        if (barcoUno <= 0){
+            System.out.println ("El jugador dos ha ganado");
+            return true;
+        }
+         if(barcoDos <= 0){
+                System.out.println ("El jugador uno ha ganado");
+                return true;
+            }
+
+            return false;
+        }
+
+
+    public void jugar (){
+
+        boolean seAcaboElJuego = false;
+        int jugadorActual = 1;
+
+        System.out.println("Por favor, jugador " +jugadorActual+ ". Posiciona tus 3 barcos");
+        posicionDelBarco(true);
+
+        System.out.println("Por favor, jugador " +jugadorActual+ ". Posiciona tus 3 barcos");
+        posicionDelBarco(false);
+
+        while (!seAcaboElJuego) {
+
+            mostrarTablero(jugadorActual);
+            
+            System.out.println ("Jugador" + jugadorActual + "Ingrese una fila del 0-4, por favor: ");
+            int fila = scanner.nextInt();
+            System.out.println ("Jugador" + jugadorActual + "Ingrese una columna del 0-4, por favor: ");
+            int columna = scanner.nextInt();
+            disparos(fila, columna, jugadorActual == 1);
+
+            seAcaboElJuego = verificarSiHayGanador();
+
+            if (jugadorActual == 1) {
+                jugadorActual = 2;
+
+            }else{
+
+                jugadorActual = 1;
+            }
+        }
+            System.out.println ("El juega ha acabado con éxito, :) ");
     }
 }
