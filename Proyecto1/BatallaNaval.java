@@ -1,5 +1,23 @@
- import java.util.Scanner;
+/**
 
+@file BatallaNaval.Java
+@brief En esta clase se presenta el juego BatallaNaval
+
+
+Esta clase contiene absolutamente toda la logica y estado del juego: los tableros, los disparos,
+colocacion de los barcos, los turnos y la verificacion de los ganadores.
+
+@author Leonardo Solano Ramirez
+@version final
+@date 16-05-2025
+ */
+
+
+import java.util.Scanner;
+
+/**
+ * @brief Esta es la clase principal del juego batalla naval entre los dos jugadores
+ */
 public class BatallaNaval {
 
     private int barcoUno;
@@ -11,6 +29,10 @@ public class BatallaNaval {
     private char [][] disparosJugador2;
     private Scanner scanner = new Scanner (System.in);
 
+    /**
+     * @brief Este es el constructor de la clase BatallaNaval, permite que se cree el objeto en la clase main. Todo lo que esta dentro de este
+     * metodo se va a inicializar automaticamente cuando se cree el objeto.
+     */
     public BatallaNaval (){
 
         //En el metodo constructor se inicializan los tableros, al vida de los barcos y los respectivos disparos de los jugadores.
@@ -31,29 +53,60 @@ public class BatallaNaval {
 
 
     // Setter
-
+    
+    /**
+     * @brief Este barcoUno establecera la vida de los barcos del jugador 1
+     * @param barcoUno Se le asignara el valor de vida del barco
+     */
     public void setBarcoUno (int barcoUno){
         this.barcoUno = barcoUno;
     }
+
+    /**
+     * @brief Este barcoUno establecera la vida de los barcos del jugador 2
+     * @param barcoDos Se le asignara el valor de vida del barco
+     */
     public void setBarcoDos (int barcoDos){
         this.barcoDos = barcoDos;
     }
+
+    /**
+     * @brief Establecera el turno del jugador actual
+     * @param turnoJugador tiene un valor booleana para determinar el turno
+     */
     public void setTurnoJugador (boolean turnoJugador){
         this.turnoJugador = turnoJugador;
     }
 
     //Getters
 
+    /**
+     * @brief Obtiene el valor de vida del barco del jugador 1
+     * @return Retorna la vida del barco
+     */
     public int getBarcoUno (){
         return barcoUno;
     }
+
+     /**
+     * @brief Obtiene el valor de vida del barco del jugador 2
+     * @return Retorna la vida del barco
+     */
     public int getBarcoDos (){
         return barcoDos;
     }
+     /**
+     * @brief Retorna el turno de alguno de los dos jugadores
+     * @return true si es el turno del jugador 1.
+     */
     public boolean getTurnoJugador (){
         return turnoJugador;
     }
 
+    /**
+     * @brief Inicializa un tablero con los carecteres "-"
+     * @param tablero que se inicializara
+     */
     public void inicializarTab (char [][] tablero){
         for ( int i = 0; i < tablero.length; i++){
             for (int j = 0; j < tablero[i].length; j++){
@@ -62,13 +115,21 @@ public class BatallaNaval {
         }
     }
 
+    /**
+     * @brief Asigna la vida d elos barcos a los jugadores
+     */
     //Este metodo permite asignarle vida a los barcos de los jugadores.
     public void vidaBarcos (){
 
         this.barcoUno = 300;
         this.barcoDos = 300;
     }
-
+    /**
+     * @brief Permite disparar a los barcos en una posicion del tablero oponente
+     * @param fila a la fila que se va a disparar
+     * @param columna a la columna que se va a disparar
+     * @param jugador1 sera true si es el turno de disparar al jugador1 o sera false si es el turno del jugador2
+     */
     //Por medio de este metodo se da la accion de disparle entre los dos jugadores. Ademas permita saber cuando acerto y fallo un jugador.
     public void disparos ( int fila, int columna, boolean jugador1){
 
@@ -104,6 +165,10 @@ public class BatallaNaval {
          }
     }
 
+    /**
+     * @brief Permite a los jugadores colocar el barco en cualquier lado del tablero
+     * @param esjugador true si es el jugador1 quien debe poner los barcos, false si le toca al jugador2
+     */
     //Este metodo permite colocar los barco en el tablero de cada jugador.
     public void posicionDelBarco (boolean esjugador){
 
@@ -151,6 +216,10 @@ public class BatallaNaval {
         }
     }
 
+    /**
+     * @brief Muestra el tablero del jugador actual y los diparos que este ha hecho
+     * @param jugadorActual indica el numero del jugador actual (sea 1 o 2)
+     */
     //Este metodo le permite al programa mostrar el tablero en la pantalla de los jugadores por turno.
     public void mostrarTablero (int jugadorActual){
 
@@ -175,6 +244,10 @@ public class BatallaNaval {
         impresionDeMatriz (disparosHechos);
     }
 
+    /**
+     * @brief Imprime la matriz que se vera en todo en la consola
+     * @param matriz permite imprimir los caracteres en consola
+     */
     //Este metodo se relaciona con el metodo mostrarTablero ya que, este precisamente muestra la matriz del tablero donde se va a colar todo.
     public void impresionDeMatriz (char [][] matriz){
         for (int i = 0; i < 5; i++){
@@ -186,6 +259,10 @@ public class BatallaNaval {
         }
     }
 
+    /**
+     * @brief verifica si uno de los dos jugarores ya gano el juego
+     * @return si es true hay ganador, si es false significa que no hay ganador
+     */
     //Este metodo le permite al programa ver si ya uno de los dos jugadores ganaron el juego. La idea es que verifique si los barcos ya tienen 0 de vida
     public boolean verificarSiHayGanador() {
         if (barcoUno <= 0){
@@ -201,6 +278,9 @@ public class BatallaNaval {
             return false;
         }
 
+        /**
+         * @brief Permite el flujo completo del juego
+         */
     /*Por ultimo, el metodo jugar permite que los jugadores puedan interactuar con todos los otros metodos ya creados. Les permite colocar
      * los barcos dentro del tablero, saber cuando se acaba el juego y disparar a los otros barcos.
      */
