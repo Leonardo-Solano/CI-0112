@@ -48,8 +48,8 @@ public class Menu {
                 siguejugando = respuestaJugador.equals("s");
 
             }else{
-                
-                if (opcion = 2){    
+
+                if (opcion == 2){    
                     System.out.println ("*** ¿Deseas jugar de nuevo? (s/n) ***");
                     String respuestaJugador = scanner.nextLine(). toLowerCase();
                     siguejugando = respuestaJugador.equals("s");
