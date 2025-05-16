@@ -42,10 +42,18 @@ public class Menu {
                     break;
             }
 
-            if (opcion == 1 || opcion == 2){
+            if (opcion == 1){
                 System.out.println ("*** ¿Deseas jugar de nuevo? (s/n) ***");
                 String respuestaJugador = scanner.nextLine(). toLowerCase();
                 siguejugando = respuestaJugador.equals("s");
+
+            }else{
+                
+                if (opcion = 2){    
+                    System.out.println ("*** ¿Deseas jugar de nuevo? (s/n) ***");
+                    String respuestaJugador = scanner.nextLine(). toLowerCase();
+                    siguejugando = respuestaJugador.equals("s");
+                }
             }
         }
 
