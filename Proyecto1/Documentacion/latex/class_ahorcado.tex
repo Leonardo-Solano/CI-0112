@@ -1,0 +1,134 @@
+\doxysection{Ahorcado Class Reference}
+\hypertarget{class_ahorcado}{}\label{class_ahorcado}\index{Ahorcado@{Ahorcado}}
+
+
+Contiene la lógica y estado del juego del \doxylink{class_ahorcado}{Ahorcado}.  
+
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_ahorcado_a8c9fd34c4e133d8ec28736c784f71c44}{Ahorcado}} (String palabra)
+\begin{DoxyCompactList}\small\item\em Constructor del juego \doxylink{class_ahorcado}{Ahorcado}. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_ahorcado_aeb1bb28abbcff7d50c4be058650eb06b}{get\+Intentos\+Restantes}} ()
+\begin{DoxyCompactList}\small\item\em Obtiene el número de intentos restantes. \end{DoxyCompactList}\item 
+String \mbox{\hyperlink{class_ahorcado_ab460b8341e42ca0e802a7e040e47e346}{get\+Progreso}} ()
+\begin{DoxyCompactList}\small\item\em Obtiene el progreso actual como cadena. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_ahorcado_a729402e2510e0950692ba7c8abb8f9fd}{adivinar\+Letra}} (char letra)
+\begin{DoxyCompactList}\small\item\em Método para procesar una letra adivinada por el jugador. \end{DoxyCompactList}\item 
+boolean \mbox{\hyperlink{class_ahorcado_a86fc96251399d2690c3b9a5cf385a31b}{ha\+Ganado}} ()
+\begin{DoxyCompactList}\small\item\em Verifica si el jugador ha ganado. \end{DoxyCompactList}\item 
+boolean \mbox{\hyperlink{class_ahorcado_a315dd5f2c006a94b97a2c38a5cf92529}{ha\+Perdido}} ()
+\begin{DoxyCompactList}\small\item\em Verifica si el jugador ha perdido. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_ahorcado_a45b95e6ce9ba69c8eb94f200d005ab94}{jugar}} ()
+\begin{DoxyCompactList}\small\item\em Método que ejecuta una partida completa del juego. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Contiene la lógica y estado del juego del \doxylink{class_ahorcado}{Ahorcado}. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_ahorcado_a8c9fd34c4e133d8ec28736c784f71c44}\index{Ahorcado@{Ahorcado}!Ahorcado@{Ahorcado}}
+\index{Ahorcado@{Ahorcado}!Ahorcado@{Ahorcado}}
+\doxysubsubsection{\texorpdfstring{Ahorcado()}{Ahorcado()}}
+{\footnotesize\ttfamily \label{class_ahorcado_a8c9fd34c4e133d8ec28736c784f71c44} 
+Ahorcado.\+Ahorcado (\begin{DoxyParamCaption}\item[{String}]{palabra}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor del juego \doxylink{class_ahorcado}{Ahorcado}. 
+
+Inicializa la palabra secreta, el progreso con guiones bajos y los intentos restantes.
+
+
+\begin{DoxyParams}{Parameters}
+{\em palabra} & Palabra que debe adivinar el jugador 2. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_ahorcado_a729402e2510e0950692ba7c8abb8f9fd}\index{Ahorcado@{Ahorcado}!adivinarLetra@{adivinarLetra}}
+\index{adivinarLetra@{adivinarLetra}!Ahorcado@{Ahorcado}}
+\doxysubsubsection{\texorpdfstring{adivinarLetra()}{adivinarLetra()}}
+{\footnotesize\ttfamily \label{class_ahorcado_a729402e2510e0950692ba7c8abb8f9fd} 
+void Ahorcado.\+adivinar\+Letra (\begin{DoxyParamCaption}\item[{char}]{letra}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Método para procesar una letra adivinada por el jugador. 
+
+Verifica si la letra ya fue usada, si está en la palabra secreta, y actualiza el progreso o reduce intentos.
+
+
+\begin{DoxyParams}{Parameters}
+{\em letra} & Letra que el jugador intenta adivinar. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_ahorcado_aeb1bb28abbcff7d50c4be058650eb06b}\index{Ahorcado@{Ahorcado}!getIntentosRestantes@{getIntentosRestantes}}
+\index{getIntentosRestantes@{getIntentosRestantes}!Ahorcado@{Ahorcado}}
+\doxysubsubsection{\texorpdfstring{getIntentosRestantes()}{getIntentosRestantes()}}
+{\footnotesize\ttfamily \label{class_ahorcado_aeb1bb28abbcff7d50c4be058650eb06b} 
+int Ahorcado.\+get\+Intentos\+Restantes (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Obtiene el número de intentos restantes. 
+
+\begin{DoxyReturn}{Returns}
+Número de intentos que quedan. 
+\end{DoxyReturn}
+\Hypertarget{class_ahorcado_ab460b8341e42ca0e802a7e040e47e346}\index{Ahorcado@{Ahorcado}!getProgreso@{getProgreso}}
+\index{getProgreso@{getProgreso}!Ahorcado@{Ahorcado}}
+\doxysubsubsection{\texorpdfstring{getProgreso()}{getProgreso()}}
+{\footnotesize\ttfamily \label{class_ahorcado_ab460b8341e42ca0e802a7e040e47e346} 
+String Ahorcado.\+get\+Progreso (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Obtiene el progreso actual como cadena. 
+
+\begin{DoxyReturn}{Returns}
+Progreso del jugador con las letras adivinadas. 
+\end{DoxyReturn}
+\Hypertarget{class_ahorcado_a86fc96251399d2690c3b9a5cf385a31b}\index{Ahorcado@{Ahorcado}!haGanado@{haGanado}}
+\index{haGanado@{haGanado}!Ahorcado@{Ahorcado}}
+\doxysubsubsection{\texorpdfstring{haGanado()}{haGanado()}}
+{\footnotesize\ttfamily \label{class_ahorcado_a86fc96251399d2690c3b9a5cf385a31b} 
+boolean Ahorcado.\+ha\+Ganado (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Verifica si el jugador ha ganado. 
+
+\begin{DoxyReturn}{Returns}
+true si adivinó todas las letras, false si no. 
+\end{DoxyReturn}
+\Hypertarget{class_ahorcado_a315dd5f2c006a94b97a2c38a5cf92529}\index{Ahorcado@{Ahorcado}!haPerdido@{haPerdido}}
+\index{haPerdido@{haPerdido}!Ahorcado@{Ahorcado}}
+\doxysubsubsection{\texorpdfstring{haPerdido()}{haPerdido()}}
+{\footnotesize\ttfamily \label{class_ahorcado_a315dd5f2c006a94b97a2c38a5cf92529} 
+boolean Ahorcado.\+ha\+Perdido (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Verifica si el jugador ha perdido. 
+
+\begin{DoxyReturn}{Returns}
+true si se acabaron los intentos, false si aún quedan. 
+\end{DoxyReturn}
+\Hypertarget{class_ahorcado_a45b95e6ce9ba69c8eb94f200d005ab94}\index{Ahorcado@{Ahorcado}!jugar@{jugar}}
+\index{jugar@{jugar}!Ahorcado@{Ahorcado}}
+\doxysubsubsection{\texorpdfstring{jugar()}{jugar()}}
+{\footnotesize\ttfamily \label{class_ahorcado_a45b95e6ce9ba69c8eb94f200d005ab94} 
+void Ahorcado.\+jugar (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Método que ejecuta una partida completa del juego. 
+
+Este método coordina la entrada de letras por el jugador, llama a los métodos de verificación y determina si se gana o se pierde. Solo termina cuando se adivina la palabra o se acaban los intentos. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Proyecto1/\mbox{\hyperlink{_ahorcado_8java}{Ahorcado.\+java}}\end{DoxyCompactItemize}

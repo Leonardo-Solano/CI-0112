@@ -1,0 +1,260 @@
+\doxysection{Batalla\+Naval Class Reference}
+\hypertarget{class_batalla_naval}{}\label{class_batalla_naval}\index{BatallaNaval@{BatallaNaval}}
+
+
+Esta es la clase principal del juego batalla naval entre los dos jugadores.  
+
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_batalla_naval_a4602117c3d2d526a0a594aad200e9652}{Batalla\+Naval}} ()
+\begin{DoxyCompactList}\small\item\em Este es el constructor de la clase \doxylink{class_batalla_naval}{Batalla\+Naval}, permite que se cree el objeto en la clase main. Todo lo que esta dentro de este metodo se va a inicializar automaticamente cuando se cree el objeto. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_batalla_naval_aa65b12d0bca44bf94b54971fa89ee09a}{set\+Barco\+Uno}} (int barco\+Uno)
+\begin{DoxyCompactList}\small\item\em Este barco\+Uno establecera la vida de los barcos del jugador 1. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_batalla_naval_ab2f115c149c6572604e54e48f51e6b63}{set\+Barco\+Dos}} (int barco\+Dos)
+\begin{DoxyCompactList}\small\item\em Este barco\+Uno establecera la vida de los barcos del jugador 2. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_batalla_naval_abfa38b3e7c83d9d4c112844bc8bf6bf2}{set\+Turno\+Jugador}} (boolean turno\+Jugador)
+\begin{DoxyCompactList}\small\item\em Establecera el turno del jugador actual. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_batalla_naval_ae03e5ce13954e6a9e1d267657189b6bf}{get\+Barco\+Uno}} ()
+\begin{DoxyCompactList}\small\item\em Obtiene el valor de vida del barco del jugador 1. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_batalla_naval_af9b484bcadaf01d92c8e6c2a532eb482}{get\+Barco\+Dos}} ()
+\begin{DoxyCompactList}\small\item\em Obtiene el valor de vida del barco del jugador 2. \end{DoxyCompactList}\item 
+boolean \mbox{\hyperlink{class_batalla_naval_ad3bb1769941d1dac1e6d63b9167adfeb}{get\+Turno\+Jugador}} ()
+\begin{DoxyCompactList}\small\item\em Retorna el turno de alguno de los dos jugadores. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_batalla_naval_a3b182f6efcc33e76cee346cfa716a62e}{inicializar\+Tab}} (char\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} tablero)
+\begin{DoxyCompactList}\small\item\em Inicializa un tablero con los carecteres "{}-\/"{}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_batalla_naval_a766b16df5ce687fcdab858f8e7283b7b}{vida\+Barcos}} ()
+\begin{DoxyCompactList}\small\item\em Asigna la vida d elos barcos a los jugadores. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_batalla_naval_abe794419842db80148b4f73e7b2dc023}{disparos}} (int fila, int columna, boolean jugador1)
+\begin{DoxyCompactList}\small\item\em Permite disparar a los barcos en una posicion del tablero oponente. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_batalla_naval_ae9ec3e2cb101bcf0695d7a6b9dbb9c39}{posicion\+Del\+Barco}} (boolean esjugador)
+\begin{DoxyCompactList}\small\item\em Permite a los jugadores colocar el barco en cualquier lado del tablero. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_batalla_naval_ac5c395432c726c32764972cae3561b6b}{mostrar\+Tablero}} (int jugador\+Actual)
+\begin{DoxyCompactList}\small\item\em Muestra el tablero del jugador actual y los diparos que este ha hecho. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_batalla_naval_afaf3a05eff736e6c29beb7fcb3e9225b}{impresion\+De\+Matriz}} (char\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} matriz)
+\begin{DoxyCompactList}\small\item\em Imprime la matriz que se vera en todo en la consola. \end{DoxyCompactList}\item 
+boolean \mbox{\hyperlink{class_batalla_naval_a36991d64878c060a306fa2aae310b834}{verificar\+Si\+Hay\+Ganador}} ()
+\begin{DoxyCompactList}\small\item\em verifica si uno de los dos jugarores ya gano el juego \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_batalla_naval_a02e544cd91380d83829eaf992959d9b1}{jugar}} ()
+\begin{DoxyCompactList}\small\item\em Permite el flujo completo del juego. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Esta es la clase principal del juego batalla naval entre los dos jugadores. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_batalla_naval_a4602117c3d2d526a0a594aad200e9652}\index{BatallaNaval@{BatallaNaval}!BatallaNaval@{BatallaNaval}}
+\index{BatallaNaval@{BatallaNaval}!BatallaNaval@{BatallaNaval}}
+\doxysubsubsection{\texorpdfstring{BatallaNaval()}{BatallaNaval()}}
+{\footnotesize\ttfamily \label{class_batalla_naval_a4602117c3d2d526a0a594aad200e9652} 
+Batalla\+Naval.\+Batalla\+Naval (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Este es el constructor de la clase \doxylink{class_batalla_naval}{Batalla\+Naval}, permite que se cree el objeto en la clase main. Todo lo que esta dentro de este metodo se va a inicializar automaticamente cuando se cree el objeto. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_batalla_naval_abe794419842db80148b4f73e7b2dc023}\index{BatallaNaval@{BatallaNaval}!disparos@{disparos}}
+\index{disparos@{disparos}!BatallaNaval@{BatallaNaval}}
+\doxysubsubsection{\texorpdfstring{disparos()}{disparos()}}
+{\footnotesize\ttfamily \label{class_batalla_naval_abe794419842db80148b4f73e7b2dc023} 
+void Batalla\+Naval.\+disparos (\begin{DoxyParamCaption}\item[{int}]{fila}{, }\item[{int}]{columna}{, }\item[{boolean}]{jugador1}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Permite disparar a los barcos en una posicion del tablero oponente. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em fila} & a la fila que se va a disparar \\
+\hline
+{\em columna} & a la columna que se va a disparar \\
+\hline
+{\em jugador1} & sera true si es el turno de disparar al jugador1 o sera false si es el turno del jugador2 \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_batalla_naval_af9b484bcadaf01d92c8e6c2a532eb482}\index{BatallaNaval@{BatallaNaval}!getBarcoDos@{getBarcoDos}}
+\index{getBarcoDos@{getBarcoDos}!BatallaNaval@{BatallaNaval}}
+\doxysubsubsection{\texorpdfstring{getBarcoDos()}{getBarcoDos()}}
+{\footnotesize\ttfamily \label{class_batalla_naval_af9b484bcadaf01d92c8e6c2a532eb482} 
+int Batalla\+Naval.\+get\+Barco\+Dos (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Obtiene el valor de vida del barco del jugador 2. 
+
+\begin{DoxyReturn}{Returns}
+Retorna la vida del barco 
+\end{DoxyReturn}
+\Hypertarget{class_batalla_naval_ae03e5ce13954e6a9e1d267657189b6bf}\index{BatallaNaval@{BatallaNaval}!getBarcoUno@{getBarcoUno}}
+\index{getBarcoUno@{getBarcoUno}!BatallaNaval@{BatallaNaval}}
+\doxysubsubsection{\texorpdfstring{getBarcoUno()}{getBarcoUno()}}
+{\footnotesize\ttfamily \label{class_batalla_naval_ae03e5ce13954e6a9e1d267657189b6bf} 
+int Batalla\+Naval.\+get\+Barco\+Uno (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Obtiene el valor de vida del barco del jugador 1. 
+
+\begin{DoxyReturn}{Returns}
+Retorna la vida del barco 
+\end{DoxyReturn}
+\Hypertarget{class_batalla_naval_ad3bb1769941d1dac1e6d63b9167adfeb}\index{BatallaNaval@{BatallaNaval}!getTurnoJugador@{getTurnoJugador}}
+\index{getTurnoJugador@{getTurnoJugador}!BatallaNaval@{BatallaNaval}}
+\doxysubsubsection{\texorpdfstring{getTurnoJugador()}{getTurnoJugador()}}
+{\footnotesize\ttfamily \label{class_batalla_naval_ad3bb1769941d1dac1e6d63b9167adfeb} 
+boolean Batalla\+Naval.\+get\+Turno\+Jugador (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Retorna el turno de alguno de los dos jugadores. 
+
+\begin{DoxyReturn}{Returns}
+true si es el turno del jugador 1. 
+\end{DoxyReturn}
+\Hypertarget{class_batalla_naval_afaf3a05eff736e6c29beb7fcb3e9225b}\index{BatallaNaval@{BatallaNaval}!impresionDeMatriz@{impresionDeMatriz}}
+\index{impresionDeMatriz@{impresionDeMatriz}!BatallaNaval@{BatallaNaval}}
+\doxysubsubsection{\texorpdfstring{impresionDeMatriz()}{impresionDeMatriz()}}
+{\footnotesize\ttfamily \label{class_batalla_naval_afaf3a05eff736e6c29beb7fcb3e9225b} 
+void Batalla\+Naval.\+impresion\+De\+Matriz (\begin{DoxyParamCaption}\item[{char}]{matriz}{\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Imprime la matriz que se vera en todo en la consola. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em matriz} & permite imprimir los caracteres en consola \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_batalla_naval_a3b182f6efcc33e76cee346cfa716a62e}\index{BatallaNaval@{BatallaNaval}!inicializarTab@{inicializarTab}}
+\index{inicializarTab@{inicializarTab}!BatallaNaval@{BatallaNaval}}
+\doxysubsubsection{\texorpdfstring{inicializarTab()}{inicializarTab()}}
+{\footnotesize\ttfamily \label{class_batalla_naval_a3b182f6efcc33e76cee346cfa716a62e} 
+void Batalla\+Naval.\+inicializar\+Tab (\begin{DoxyParamCaption}\item[{char}]{tablero}{\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Inicializa un tablero con los carecteres "{}-\/"{}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tablero} & que se inicializara \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_batalla_naval_a02e544cd91380d83829eaf992959d9b1}\index{BatallaNaval@{BatallaNaval}!jugar@{jugar}}
+\index{jugar@{jugar}!BatallaNaval@{BatallaNaval}}
+\doxysubsubsection{\texorpdfstring{jugar()}{jugar()}}
+{\footnotesize\ttfamily \label{class_batalla_naval_a02e544cd91380d83829eaf992959d9b1} 
+void Batalla\+Naval.\+jugar (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Permite el flujo completo del juego. 
+
+\Hypertarget{class_batalla_naval_ac5c395432c726c32764972cae3561b6b}\index{BatallaNaval@{BatallaNaval}!mostrarTablero@{mostrarTablero}}
+\index{mostrarTablero@{mostrarTablero}!BatallaNaval@{BatallaNaval}}
+\doxysubsubsection{\texorpdfstring{mostrarTablero()}{mostrarTablero()}}
+{\footnotesize\ttfamily \label{class_batalla_naval_ac5c395432c726c32764972cae3561b6b} 
+void Batalla\+Naval.\+mostrar\+Tablero (\begin{DoxyParamCaption}\item[{int}]{jugador\+Actual}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Muestra el tablero del jugador actual y los diparos que este ha hecho. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em jugador\+Actual} & indica el numero del jugador actual (sea 1 o 2) \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_batalla_naval_ae9ec3e2cb101bcf0695d7a6b9dbb9c39}\index{BatallaNaval@{BatallaNaval}!posicionDelBarco@{posicionDelBarco}}
+\index{posicionDelBarco@{posicionDelBarco}!BatallaNaval@{BatallaNaval}}
+\doxysubsubsection{\texorpdfstring{posicionDelBarco()}{posicionDelBarco()}}
+{\footnotesize\ttfamily \label{class_batalla_naval_ae9ec3e2cb101bcf0695d7a6b9dbb9c39} 
+void Batalla\+Naval.\+posicion\+Del\+Barco (\begin{DoxyParamCaption}\item[{boolean}]{esjugador}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Permite a los jugadores colocar el barco en cualquier lado del tablero. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em esjugador} & true si es el jugador1 quien debe poner los barcos, false si le toca al jugador2 \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_batalla_naval_ab2f115c149c6572604e54e48f51e6b63}\index{BatallaNaval@{BatallaNaval}!setBarcoDos@{setBarcoDos}}
+\index{setBarcoDos@{setBarcoDos}!BatallaNaval@{BatallaNaval}}
+\doxysubsubsection{\texorpdfstring{setBarcoDos()}{setBarcoDos()}}
+{\footnotesize\ttfamily \label{class_batalla_naval_ab2f115c149c6572604e54e48f51e6b63} 
+void Batalla\+Naval.\+set\+Barco\+Dos (\begin{DoxyParamCaption}\item[{int}]{barco\+Dos}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Este barco\+Uno establecera la vida de los barcos del jugador 2. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em barco\+Dos} & Se le asignara el valor de vida del barco \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_batalla_naval_aa65b12d0bca44bf94b54971fa89ee09a}\index{BatallaNaval@{BatallaNaval}!setBarcoUno@{setBarcoUno}}
+\index{setBarcoUno@{setBarcoUno}!BatallaNaval@{BatallaNaval}}
+\doxysubsubsection{\texorpdfstring{setBarcoUno()}{setBarcoUno()}}
+{\footnotesize\ttfamily \label{class_batalla_naval_aa65b12d0bca44bf94b54971fa89ee09a} 
+void Batalla\+Naval.\+set\+Barco\+Uno (\begin{DoxyParamCaption}\item[{int}]{barco\+Uno}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Este barco\+Uno establecera la vida de los barcos del jugador 1. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em barco\+Uno} & Se le asignara el valor de vida del barco \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_batalla_naval_abfa38b3e7c83d9d4c112844bc8bf6bf2}\index{BatallaNaval@{BatallaNaval}!setTurnoJugador@{setTurnoJugador}}
+\index{setTurnoJugador@{setTurnoJugador}!BatallaNaval@{BatallaNaval}}
+\doxysubsubsection{\texorpdfstring{setTurnoJugador()}{setTurnoJugador()}}
+{\footnotesize\ttfamily \label{class_batalla_naval_abfa38b3e7c83d9d4c112844bc8bf6bf2} 
+void Batalla\+Naval.\+set\+Turno\+Jugador (\begin{DoxyParamCaption}\item[{boolean}]{turno\+Jugador}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Establecera el turno del jugador actual. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em turno\+Jugador} & tiene un valor booleana para determinar el turno \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_batalla_naval_a36991d64878c060a306fa2aae310b834}\index{BatallaNaval@{BatallaNaval}!verificarSiHayGanador@{verificarSiHayGanador}}
+\index{verificarSiHayGanador@{verificarSiHayGanador}!BatallaNaval@{BatallaNaval}}
+\doxysubsubsection{\texorpdfstring{verificarSiHayGanador()}{verificarSiHayGanador()}}
+{\footnotesize\ttfamily \label{class_batalla_naval_a36991d64878c060a306fa2aae310b834} 
+boolean Batalla\+Naval.\+verificar\+Si\+Hay\+Ganador (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+verifica si uno de los dos jugarores ya gano el juego 
+
+\begin{DoxyReturn}{Returns}
+si es true hay ganador, si es false significa que no hay ganador 
+\end{DoxyReturn}
+\Hypertarget{class_batalla_naval_a766b16df5ce687fcdab858f8e7283b7b}\index{BatallaNaval@{BatallaNaval}!vidaBarcos@{vidaBarcos}}
+\index{vidaBarcos@{vidaBarcos}!BatallaNaval@{BatallaNaval}}
+\doxysubsubsection{\texorpdfstring{vidaBarcos()}{vidaBarcos()}}
+{\footnotesize\ttfamily \label{class_batalla_naval_a766b16df5ce687fcdab858f8e7283b7b} 
+void Batalla\+Naval.\+vida\+Barcos (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Asigna la vida d elos barcos a los jugadores. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Proyecto1/\mbox{\hyperlink{_batalla_naval_8java}{Batalla\+Naval.\+java}}\end{DoxyCompactItemize}
