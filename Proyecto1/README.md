@@ -4,6 +4,9 @@
 ## Descripción
 Este proyecto consiste en una aplicación de consola desarrollada en Java que permite al usuario elegir entre jugar dos juegos. La primera opción es el Ahorcado y e segundo Batalla Naval. Esto a través de un menú principal que permite al usuario elegir el juego que desea ejecutar.
 
+## Repositorio de GitHub (El link también se encuentra en la documentación externa)
+
+[Repositorio CI-0112](https://github.com/Leonardo-Solano/CI-0112.git)
 
 ## Estructura del Proyecto
 
@@ -27,8 +30,8 @@ javac Menu.java Ahorcado.java BatallaNaval.java
 ## Como visualizar la documentación interna
 Para poder ver los comentarios internos con doxygen debe seguir los siguientes pasos:
 
--Abrir carpeta documentación.
+- Abrir carpeta documentación.
 
--Luego entrar a la opción html.
+- Luego entrar a la opción html.
 
--Abrir dentro de la carpeta html la opción index.html 
+- Abrir dentro de la carpeta html la opción index.html 
