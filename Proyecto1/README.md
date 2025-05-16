@@ -4,6 +4,7 @@
 ## Descripción
 Este proyecto consiste en una aplicación de consola desarrollada en Java que permite al usuario elegir entre jugar dos juegos. La primera opción es el Ahorcado y e segundo Batalla Naval. Esto a través de un menú principal que permite al usuario elegir el juego que desea ejecutar.
 
+
 ## Estructura del Proyecto
 
 El proyecto contiene tres clases que son las siguientes:
@@ -22,3 +23,12 @@ El proyecto contiene tres clases que son las siguientes:
 javac Menu.java Ahorcado.java BatallaNaval.java
 ```
 4. Cuando se muestre el menu puede decidir cual de los dos juegos va a ejecutar o si desea salirse.
+
+## Como visualizar la documentación interna
+Para poder ver los comentarios internos con doxygen debe seguir los siguientes pasos:
+
+-Abrir carpeta documentación.
+
+-Luego entrar a la opción html.
+
+-Abrir dentro de la carpeta html la opción index.html 
