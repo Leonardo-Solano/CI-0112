@@ -23,6 +23,29 @@ public class VentanaPrincipal extends JFrame{
         menuBar.add (menuArchivo);
         setJMenuBar (menuBar);
 
+        JPanel panelFormulario = new JPanel();
+        panelFormulario.setLayout(new BoxLayout (panelFormulario, BoxLayout.Y_AXIS));
+
+        JLabel etiquetaNombre = new JLabel("Nombre");
+        JTextField campoNombre = new JTextField(20);
+
+        JLabel etiquetaEmail = new JLabel("Email");
+        JTextField campoEmail = new JTextField(20);
+
+        JLabel etiquetaTelefono = new JLabel("Telefono");
+        JTextField campoTelefono = new JTextField(20);
+
+        panelFormulario.add(etiquetaNombre);
+        panelFormulario.add (campoNombre);
+        panelFormulario.add (etiquetaEmail);
+        panelFormulario.add (campoEmail);
+        panelFormulario.add (etiquetaTelefono);
+        panelFormulario.add (campoTelefono);
+
+        add (panelFormulario);
+
+        salirItem.addActionListener(e -> System.exit (0));
+
     }
 
     public static void main (String [] args){
