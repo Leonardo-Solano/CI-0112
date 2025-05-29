@@ -1,5 +1,5 @@
 # CI-0112
 
- Laboratorio 2
+Repositorio de programación.
  
- El objetivo de este laboratorio es empezar a acostumbrarnos al uso de GitHub mediante una pequeña tarea de programación de batalla campal utilizando los arrays"
+Este repositorio tiene como fin almacenar todos los trabajos que se vean durante el curso de programación 1
